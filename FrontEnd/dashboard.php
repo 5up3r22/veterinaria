@@ -34,7 +34,7 @@
               height="30" alt="image">
           </a>
         </div>
-     
+     <!--navbar/-->
         <div
           class="collapse navbar-collapse justify-content-end col-md-2 navbar-collapse-1 pr-md-0">
           <ul class="navbar-nav">
