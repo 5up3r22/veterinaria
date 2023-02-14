@@ -30,7 +30,7 @@
                   placeholder="Identification">
               </div>
               <div class="form-group mb-4">
-                <input type="password" name="password" class="form-control" id="password" placeholder="Password"></textarea>
+                <input type="password" name="password" class="form-control" id="password" placeholder="Password"></input>
               </div>
               <div class="form-group">
                 <button type="submit" value="Send" class="btn btn-primary btn-lg">

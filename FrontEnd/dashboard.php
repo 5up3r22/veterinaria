@@ -1,12 +1,6 @@
-<?php
-session_start();
-if (!isset($_SESSION["user_log"])) {
-  session_destroy();
-  echo'<script type="text/javascript">
-          alert("Debe primero realizar el login con su identificacion y contraseña");
-          </script>';
-          header("location:../index.php");
-} 
+<?php 
+include '../BackEnd/validarSesionActiva.php';
+sesion();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,65 +23,65 @@ if (!isset($_SESSION["user_log"])) {
     <div class="border-end bg-white" id="sidebar-wrapper">
       <div class="sidebar-heading border-bottom bg-primary fw-bold">Pets Clinic</div>
       <div class="list-group list-group-flush">
-        <a class="list-group-item list-group-item-action list-group-item-light p-3 fw-bold display-7" href="#!"></i>Users</a>
-        <a class="list-group-item list-group-item-action list-group-item-light p-3 fw-bold display-7" href="#!">Pets</a>
-        <a class="list-group-item list-group-item-action list-group-item-light p-3 fw-bold display-7" href="#!">Visit records</a>
-        <a class="list-group-item list-group-item-action list-group-item-light p-3 fw-bold display-7" href="#!">Clinic History</a>
+      <a class="list-group-item list-group-item-action list-group-item-light p-3 fw-bold display-7" href="../FrontEnd/vistaUsuarios.php"></i>Users</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 fw-bold display-7" href="../FrontEnd/vistaMascotas.php">Pets</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 fw-bold display-7" href="../FrontEnd/vistaReportes.php">Visit records</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 fw-bold display-7" href="../FrontEnd/vistaHistoriaClinica.php">Clinic History</a>
+                    <br>
+        <center>
+          <a href="../FrontEnd/dashboard.php" class="list-group-item-light fw-bold display-7 btn btn-outline-warning ms-md-3">Dashboard Main</a>
+        </center>
+        <br>
+        <center>
+          <form action="../BackEnd/validarLogout.php" method="post">
+            <input type="submit" class="list-group-item-light fw-bold display-7 btn btn-outline-primary ms-md-3" name="logout" value="Log Out"></form>
+        </center>
+        <br>
       </div>
     </div>
     <div id="page-content-wrapper">
-      <nav class="navbar navbar-light bg-white  navbar-expand-md ">
+      <nav class="navbar navbar-light bg-light navbar-expand-md ">
         <div class="container" style=" margin-bottom:20px">
           <div class="col-5 pl-md-5 text-left">
             <a href="#" id="sidebarToggle">
               <img src="../images/logo.jpg" height="30" alt="image">
             </a>
           </div>
-          <!--navbar/-->
-          <div class="collapse navbar-collapse justify-content-end col-md-2 navbar-collapse-1 pr-md-0">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <form action="../BackEnd/validarLogout.php" method="post">
-                  <input type="submit" class="btn btn-outline-primary ms-md-3" name="logout" value="Log Out">
-                </form>
-              </li>
-            </ul>
-          </div>
         </div>
       </nav>
       <!-- Page content-->
       <div class="container-fluid" style="padding:5%;">
-        <h2>Bienvenido
+        <h2>Welcome
           <?php
-          echo "" . $_SESSION["user_log"]["name"]?>
+          echo "" . $_SESSION["user_log"]["name"] ?>
         </h2>
         <div class="card-group" style="padding: 10%">
           <div class="card" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title">Users</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <a href="../FrontEnd/vistaUsuarios.php" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
           <div class="card" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title">Pets</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <a href="../FrontEnd/vistaMascotas.php" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
           <div class="card" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title">Visit Records</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <a href="../FrontEnd/vistaReportes.php" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
           <div class="card" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title">Clinic History</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <a href="../FrontEnd/vistaHistoriaClinica.php" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
         </div>
