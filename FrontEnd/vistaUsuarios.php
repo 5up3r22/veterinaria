@@ -56,39 +56,6 @@ sesion();
           <?php
           tablaUsuarios();
           ?>
-        </div>
-
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Add User</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <form class="form" action="../BackEnd/crearUsuario.php" method="post">
-                  <div class="form-group mb-4">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Client Name">
-                  </div>
-                  <div class="form-group mb-4">
-                    <input type="number" name="identification" class="form-control" id="identification" placeholder="Identification">
-                  </div>
-                  <div class="form-group mb-4">
-                    <select class="form-control" name="gender" id="gender">
-                      <option value="">Select an Option</option>
-                      <option value="0">Masculino</option>
-                      <option value="1">Femenino</option>
-                    </select>
-                  </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-                <button type="submit" class="btn btn-success">Add</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
         <section class="fa-1x">
           <footer class="pt-4 pb-4" style="margin-top:5%;">
             <div class="container">
@@ -106,6 +73,39 @@ sesion();
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../js/scripts.js"></script>
+  <script>
+    function validarFormulario() {
+      const name = document.getElementById('name').value;
+      const identification = document.getElementById('identification').value;
+      const gender = document.getElementById('gender').value;
+      const alerta = document.getElementById('alerta');
+      if (name === '' || identification === '' || gender === '-1') {
+        alerta.innerHTML = 'Please check the fields and select an option.';
+        alerta.style.display = 'block';
+        return false;
+      } else {
+        alerta.style.display = 'none';
+        return true;
+      }
+    }
+  </script>
+  <script>
+    function validarFormulario2() {
+      const name2 = document.getElementById('name2').value;
+      const identification2 = document.getElementById('identification2').value;
+      const gender2 = document.getElementById('gender2').value;
+      const alerta2 = document.getElementById('alerta2');
+      if (name2 === '' || identification2 === '' || gender2 === '-1') {
+        alerta2.innerHTML = 'Please check the fields and select an option.';
+        alerta2.style.display = 'block';
+        return false;
+      } else {
+        alerta2.style.display = 'none';
+        return true;
+      }
+    }
+  </script>
+
 </body>
 
 </html>
