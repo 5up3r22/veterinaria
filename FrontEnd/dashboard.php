@@ -40,6 +40,7 @@
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="btn btn-outline-primary ms-md-3" href="#">Log Out→</a>
+              <!--boton para deslogguearse-->
             </li>
           </ul>
         </div>
