@@ -1,6 +1,11 @@
 <?php
 function tablaUsuarios(){
-  $mysqli = new mysqli("mysql://root:YZv9j9VAjnUf4jAOpYvo@containers-us-west-36.railway.app:7635/railway", "root", "", "control_vet");
+  $host = 'containers-us-west-36.railway.app';
+  $port = '7635';
+  $dbname = 'railway';
+  $username = 'root';
+  $password = 'YZv9j9VAjnUf4jAOpYvo';
+  $mysqli = new mysqli($host, $username, $password, $dbname, $port);
   if ($mysqli->connect_errno) {
     echo "Falló la conexión con MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
   } else {
@@ -149,7 +154,12 @@ function tablaUsuarios(){
 
 
 function tablaMascotas(){
-  $mysqli = new mysqli("mysql://root:YZv9j9VAjnUf4jAOpYvo@containers-us-west-36.railway.app:7635/railway", "root", "", "control_vet");
+  $host = 'containers-us-west-36.railway.app';
+  $port = '7635';
+  $dbname = 'railway';
+  $username = 'root';
+  $password = 'YZv9j9VAjnUf4jAOpYvo';
+  $mysqli = new mysqli($host, $username, $password, $dbname, $port);
   if ($mysqli->connect_errno) {
     echo "Falló la conexión con MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
   } else {
