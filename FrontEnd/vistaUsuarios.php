@@ -52,6 +52,7 @@ sesion();
       </nav>
       <!-- Page content-->
       <div class="container-fluid" style="padding:5%;">
+      <h2>USERS</h2>
         <div class="table-responsive">
           <?php
           tablaUsuarios();
