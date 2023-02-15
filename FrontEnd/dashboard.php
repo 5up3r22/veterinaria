@@ -59,29 +59,29 @@ sesion();
           <div class="card" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title">Users</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="../FrontEnd/vistaUsuarios.php" class="btn btn-primary">Go somewhere</a>
+              <center> <image class="card-text" src="../images/users.png"></image>
+              <a href="../FrontEnd/vistaUsuarios.php" class="btn btn-primary">Go to users page</a></center>
             </div>
           </div>
           <div class="card" style="width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title">Pets</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="../FrontEnd/vistaMascotas.php" class="btn btn-primary">Go somewhere</a>
+              <h5 class="card-title" >Pets</h5>
+              <center>  <image class="card-text" src="../images/pets.jpg"></image>
+              <a href="../FrontEnd/vistaMascotas.php" class="btn btn-primary">Go to pets page</a></center>
             </div>
           </div>
           <div class="card" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title">Visit Records</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="../FrontEnd/vistaReportes.php" class="btn btn-primary">Go somewhere</a>
+             <center> <image class="card-text" src="../images/records.jpg" ></image>
+              <a href="../FrontEnd/vistaReportes.php" class="btn btn-primary">Go to records page</a></center>
             </div>
           </div>
           <div class="card" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title">Clinic History</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="../FrontEnd/vistaHistoriaClinica.php" class="btn btn-primary">Go somewhere</a>
+              <center><image class="card-text" src="../images/history.jpg"></image>
+              <a href="../FrontEnd/vistaHistoriaClinica.php" class="btn btn-primary">Go to clinic histories</a></center>
             </div>
           </div>
         </div>
