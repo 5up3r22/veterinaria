@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$mysqli = new mysqli('mysql:host=containers-us-west-36.railway.app;port=3306;dbname=control_vet', 'root','YZv9j9VAjnUf4jAOpYvo');
+$mysqli = new mysqli('mysql://root:YZv9j9VAjnUf4jAOpYvo@containers-us-west-36.railway.app:7635/railway', 'root','YZv9j9VAjnUf4jAOpYvo');
 
 if ($mysqli->connect_errno) {
   echo "Falló la conexión con MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
