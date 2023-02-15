@@ -2,7 +2,7 @@
 session_start();
 
 $host = 'containers-us-west-36.railway.app';
-$port = '3306';
+$port = '7635';
 $dbname = 'railway';
 $username = 'root';
 $password = 'YZv9j9VAjnUf4jAOpYvo';
