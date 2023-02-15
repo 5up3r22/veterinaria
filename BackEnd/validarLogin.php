@@ -23,7 +23,7 @@ if ($mysqli->connect_errno) {
           </script>';
           }elseif($query->num_rows == 1) {
             $_SESSION["user_log"] = $query->fetch_assoc();
-            header("location:./FrontEnd/dashboard.php");
+            header("location:/FrontEnd/dashboard.php");
       }
 }
 }
