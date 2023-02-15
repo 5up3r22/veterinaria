@@ -76,11 +76,14 @@ sesion();
   <script src="../js/scripts.js"></script>
   <script>
     function validarFormulario() {
-      const name = document.getElementById('name').value;
-      const identification = document.getElementById('identification').value;
-      const gender = document.getElementById('gender').value;
+      const temp = document.getElementById('temp').value;
+      const weight = document.getElementById('weight').value;
+      const heart = document.getElementById('heart').value;
+      const comm = document.getElementById('comments').value;
+      const pet = document.getElementById('pet').value;
+      const vet = document.getElementById('vet').value;
       const alerta = document.getElementById('alerta');
-      if (name === '' || identification === '' || gender === '-1') {
+      if (temp === '' || weight=== ''|| heart=== '' || comm=== '' || pet === '-1'|| vet === '-1') {
         alerta.innerHTML = 'Please check the fields and select an option.';
         alerta.style.display = 'block';
         return false;
@@ -92,11 +95,12 @@ sesion();
   </script>
   <script>
     function validarFormulario2() {
-      const name2 = document.getElementById('name2').value;
-      const identification2 = document.getElementById('identification2').value;
-      const gender2 = document.getElementById('gender2').value;
+      const temp = document.getElementById('temp').value;
+      const weight = document.getElementById('weight').value;
+      const heart = document.getElementById('heart').value;
+      const comm = document.getElementById('comments').value;
       const alerta2 = document.getElementById('alerta2');
-      if (name2 === '' || identification2 === '' || gender2 === '-1') {
+      if (temp === '' || weight=== ''|| heart=== '' || comm=== '' || pet === '-1'|| vet === '-1') {
         alerta2.innerHTML = 'Please check the fields and select an option.';
         alerta2.style.display = 'block';
         return false;
@@ -106,7 +110,5 @@ sesion();
       }
     }
   </script>
-
 </body>
-
 </html>

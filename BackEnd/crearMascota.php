@@ -12,7 +12,7 @@ if ($mysqli->connect_errno) {
           echo "Falló error: (" . $mysqli->errno . ") " . $mysqli->error;
         }else{
         $currentDate = date('Y-m-d H:i:s');
-        $query2 = $mysqli->query("INSERT INTO `clinic_history`(`id`, `date`, `pet`) VALUES (NULL,'$currentDate',(SELECT MAX(id) FROM `pets`))");
+        $query2 = $mysqli->query("INSERT INTO `clinic_history`(`id`,`date`, `pet`) VALUES (NULL,'$currentDate',(SELECT MAX(id) FROM `pets`))");
         if (!$query2) {
             echo "Falló error: (" . $mysqli->errno . ") " . $mysqli->error;
           }else{
