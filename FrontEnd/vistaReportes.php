@@ -100,7 +100,7 @@ sesion();
       const heart = document.getElementById('heart').value;
       const comm = document.getElementById('comments').value;
       const alerta2 = document.getElementById('alerta2');
-      if (temp === '' || weight=== ''|| heart=== '' || comm=== '' || pet === '-1'|| vet === '-1') {
+      if (temp === '' || weight=== ''|| heart=== '' || comm=== '') {
         alerta2.innerHTML = 'Please check the fields and select an option.';
         alerta2.style.display = 'block';
         return false;
